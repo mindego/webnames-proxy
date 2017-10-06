@@ -13,7 +13,8 @@ $REQUEST=$_POST;
 	$supresslogin=$REQUEST['supresslogin'];
 	unset($REQUEST['extendedlog']);
 	unset($REQUEST['supresslogin']);
-
+	$REQUEST['trid']=$trid;
+	
 if ($supresslogin=="true") {
     $REQUEST['username']="test";
     $REQUEST['password']="test";
