@@ -1,0 +1,23 @@
+<head>
+<meta charset="utf-8">
+</head>
+<title>jQuery интерфейс для PHP-прокси-клиента&#9400; для RegtimeSRS</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="script.js"></script>
+<html>
+<body>
+<h3>Тестовый клиент для тестирования запросов RegtimeSRS</h3>
+Клиент "небезопасен", то есть при отправке через форму запроса с данными (логином/паролем) клиента запрос будет выполнен от его имени.
+Запросы на всякий случай журналируются. Номер транзакции (в правом поле) является "внутренним" значением этого интерфейса и через API никуда не отправляется.
+<div>
+<textarea rows="40" cols="80" resize="none" id="data" placeholder="Введите здесь запрос"></textarea>
+<textarea rows="40" cols="80" resize="none" id="result" readonly placeholder="Здесь будет результат"></textarea>
+<br>
+<input type="button" id="sendrequest" value="Отправить">
+<label><input type="checkbox" id="supresslogin" checked>Заменить логин на test</label>
+</div>
+Пример запроса:<br>
+username=test&password=test&utf8=1&interface_revision=1&thisPage=pispRenewDomain&domain_name=berendeevdom.ru&period=1
+</body>
+</html>
